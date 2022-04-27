@@ -3,10 +3,9 @@
  *@author Richard Wang
  *@date 2022/4/26 0:58
  */
-import {MyContext} from "./MyProvider";
-import {useContext} from "react";
 import {StateProps} from "./store/reducers";
-
+import { useDispatch } from 'react-redux'
+import { changeAction }  from "./store/action"
 
 const style = {
     marginTop:'5px',
@@ -27,14 +26,11 @@ const TodoItem = ({todo}:Iprops) => {
         textDecoration: todo.isFinished ? 'line-through' : 'none'
     }
     // 改变：
-    const {dispatch} = useContext(MyContext)
+    const dispatch = useDispatch()
 
     const changeHandler = () => {
         // 改变：
-        dispatch({
-            type: 'CHANGE_FINISHED',
-            id:todo.id
-        });
+        dispatch(changeAction(todo.id));
     }
 
     return <div className="todo-item" style={style}>

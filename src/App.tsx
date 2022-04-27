@@ -1,5 +1,5 @@
 import React from 'react';
-import Todo from "./components/useReducer-demo/Todo";
+import Todo from "./components/redux-todo-list/Todo";
 // import {IDCardUtils} from "./components/IDCardUtils/demo";
 
 function App() {

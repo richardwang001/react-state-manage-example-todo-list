@@ -5,7 +5,7 @@
  */
 
 import React, {createContext, useReducer} from "react";
-import reducer, {ActionProps, StateProps} from "../store/reducers";
+import reducer, {ActionProps, StateProps} from "./store/reducers";
 
 // 改变 ContextProps
 export interface ContextProps {
